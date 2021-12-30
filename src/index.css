@@ -1,0 +1,97 @@
+* {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+body {
+  padding: 0px 60px;
+}
+header {
+  position: sticky;
+  top: 0px;
+  z-index: 100;
+  background-color: white;
+}
+input {
+  box-sizing: border-box;
+  color: gray;
+  font-size: 1.2rem;
+  width: 100%;
+}
+
+.gif-grid-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.gif-grid-item {
+  width: 25vw;
+  height: 250px;
+  margin: 5px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  overflow: hidden;
+  box-sizing: border-box;
+  box-shadow: 5px 6px 10px 0px #838181;
+  border-radius: 10px;
+  animation: 1s ease enterItem;
+  position: relative;
+}
+
+.gif-grid-item img {
+  width: 100%;
+  height: 80%;
+  border-bottom: 1px solid #ccc;
+  object-fit: contain;
+}
+.gif-grid-item p {
+  text-align: center;
+  margin: 0;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  cursor: default;
+  padding: 5px;
+  box-sizing: border-box;
+}
+p {
+  position: relative;
+  display: inline-block;
+  word-wrap: break-word;
+  overflow: hidden;
+  font-size: 1rem;
+  max-height: 2.5rem;
+}
+
+@keyframes enterItem {
+  0% {
+    top: -50px;
+    opacity: 0.2;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    background-color: black;
+    color: white;
+    padding: 0px 20px;
+  }
+  header {
+    background-color: black;
+  }
+  p {
+    font-size: 0.7rem;
+    line-height: 0.9rem;
+    max-height: 2rem;
+  }
+  .gif-grid-item {
+    width: 145px;
+  }
+}
